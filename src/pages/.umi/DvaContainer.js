@@ -9,9 +9,8 @@ let app = dva({
 
 window.g_app = app;
 app.use(createLoading());
-app.use(require('../../plugins/onError.js').default);
 app.use(require('/Users/liuwei/Desktop/Gits/Git-my/Blog-app/node_modules/_dva-immer@0.2.3@dva-immer/lib/index.js').default());
-
+app.model({ namespace: 'user', ...(require('/Users/liuwei/Desktop/Gits/Git-my/Blog-app/src/models/user.js').default) });
 
 class DvaContainer extends Component {
   render() {

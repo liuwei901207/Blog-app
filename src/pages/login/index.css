@@ -1,0 +1,37 @@
+.login {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999;
+}
+
+.login-wrapper {
+	position: relative;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 460px;
+	margin: 20px auto;
+	line-height: 1;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.login-title {
+	width: 100%;
+	text-align: center;
+}
+
+.login-form {
+	width: 100%;
+}
+
+.login-form-forgot {
+	float: right;
+}
+
+.login-form-button {
+	width: 100%;
+}
