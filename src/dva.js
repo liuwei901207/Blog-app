@@ -6,10 +6,10 @@ export function config () {
       err.preventDefault()
       message.error(err.message)
     },
-    initialState: {
-      global: {
-        text: 'hi umi + dva',
-      },
-    },
+    // initialState: {
+    //   global: {
+    //     text: 'hi umi + dva',
+    //   },
+    // },
   }
 }

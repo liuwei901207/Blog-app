@@ -36,6 +36,7 @@ if (module.hot) {
   });
 }
 
+require('/Users/liuwei/Desktop/Gits/Git-my/Blog-app/src/global.css');
 // Enable service worker
 if (process.env.NODE_ENV === 'production') {
   require('./registerServiceWorker');
