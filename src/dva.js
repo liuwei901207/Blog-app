@@ -1,15 +1,10 @@
-import { message } from 'antd'
+import onError from './plugins/onError'
 
 export function config () {
   return {
     onError (err) {
       err.preventDefault()
-      message.error(err.message)
+      onError(err.message)
     },
-    // initialState: {
-    //   global: {
-    //     text: 'hi umi + dva',
-    //   },
-    // },
   }
 }
