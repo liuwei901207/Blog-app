@@ -5,11 +5,11 @@ const clearToken = () => {
 }
 
 const setToken = (token, rememberMe) => {
-  return Cookies.set('token', JSON.stringify(token), {expires: rememberMe ? 30 : 1 / 12}) // rememberMe === false 30天， 否则 2 小时
+  return Cookies.set('token', token, {expires: rememberMe ? 30 : 1 / 12}) // rememberMe === false 30天， 否则 2 小时
 }
 
 const getToken = () => {
-  return JSON.parse(Cookies.get('token'))
+  return Cookies.get('token')
 }
 
 const clearUser = () => {

@@ -5,7 +5,7 @@ import TheFooter from '../components/TheFooter'
 
 const {Header, Footer, Content} = Layout
 
-const MainLayout = ({children}) => {
+const MainBlogLayout = ({children}) => {
   return (
     <Layout>
       <Header>
@@ -19,4 +19,4 @@ const MainLayout = ({children}) => {
   )
 }
 
-export default MainLayout
+export default MainBlogLayout

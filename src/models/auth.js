@@ -34,8 +34,7 @@ export default {
     },
     *logout ({payload}, {call, put}) {
       const {token, user} = yield call(blogService.logout)
-      console.log(token, user)
-      yield put({type: 'save', payload: {token, user}})
+      yield put({type: 'remove', payload: {token, user}})
       router.push('/login') // 登出成功返回登录页面
     },
   },
