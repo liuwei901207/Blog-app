@@ -1,10 +1,10 @@
-import onError from './plugins/onError'
+import { message } from 'antd'
 
 export function config () {
   return {
     onError (err) {
       err.preventDefault()
-      onError(err.message)
+      message.error(err.message, 5) // 5 second
     },
   }
 }
