@@ -7,10 +7,43 @@ import request from '../utils/request'
  * @param rememberMe
  * @returns {*}
  */
-export function login ({username, password, rememberMe}) {
-  const mut = `mutation {
-  login(username: ${username},password: ${password},rememberMe: ${rememberMe}) {
-    id
-  }`
-  return request(mut)
+export function *login ({username, password, rememberMe}) {
+  const mutationName = 'login'
+  const mut = (`
+      mutation{
+      ${mutationName}(username:"${username}",password:"${password}",rememberMe:${rememberMe}){
+        token,
+        user{
+          id,
+          username,
+          name,
+          email,
+          cell_phone,
+          last_sign_in_at
+        }
+      }
+    }
+  `)
+  const {login} = yield request(mut, {mutationName})
+  return login
+}
+
+/**
+ *
+ * @returns {IterableIterator<*>}
+ */
+export function *logout () {
+  const mutationName = 'logout'
+  const mut = (`
+      mutation{
+      ${mutationName}{
+        token,
+        user{
+          id,
+        }
+      }
+    }
+  `)
+  const {logout} = yield request(mut, {mutationName})
+  return logout
 }
