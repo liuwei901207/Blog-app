@@ -22,6 +22,12 @@ let routes = [
         "component": require('../404.js').default
       },
       {
+        "path": "/admin",
+        "exact": true,
+        "component": require('../admin/index.js').default,
+        "Route": require('/Users/liuwei/Desktop/Gits/Git-my/Blog-app/routes/PrivateRoute.js').default
+      },
+      {
         "path": "/home",
         "exact": true,
         "component": require('../home/index.js').default
@@ -37,7 +43,7 @@ let routes = [
         "component": require('../login/index.js').default
       },
       {
-        "component": () => React.createElement(require('/Users/liuwei/.nvm/versions/node/v9.11.1/lib/node_modules/umi/node_modules/_umi-build-dev@0.22.2@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layout/index.js","routes":[{"path":"/404","exact":true,"component":"./src/pages/404.js"},{"path":"/home","exact":true,"component":"./src/pages/home/index.js"},{"path":"/","exact":true,"component":"./src/pages/index.js"},{"path":"/login","exact":true,"component":"./src/pages/login/index.js"}]}]' })
+        "component": () => React.createElement(require('/Users/liuwei/.nvm/versions/node/v9.11.1/lib/node_modules/umi/node_modules/_umi-build-dev@0.22.2@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', routes: '[{"path":"/","component":"./src/layout/index.js","routes":[{"path":"/404","exact":true,"component":"./src/pages/404.js"},{"path":"/admin","exact":true,"component":"./src/pages/admin/index.js","Route":"./routes/PrivateRoute.js"},{"path":"/home","exact":true,"component":"./src/pages/home/index.js"},{"path":"/","exact":true,"component":"./src/pages/index.js"},{"path":"/login","exact":true,"component":"./src/pages/login/index.js"}]}]' })
       }
     ]
   }

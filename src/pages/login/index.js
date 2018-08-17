@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'dva'
 import styles from './index.css'
-import { Form, Icon, Input, Button, Checkbox } from 'antd'
+import { Form, Icon, Input, Button, Checkbox, Alert } from 'antd'
 
 const FormItem = Form.Item
 
@@ -13,13 +13,13 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  // 事件
+  // 定义事件
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.form.validateFields((err, {username, password, rememberMe}) => {
       if (!err) {
         this.props.dispatch({
-          type: 'user/login',
+          type: 'auth/login',
           payload: {username, password, rememberMe},
         })
       }
@@ -29,6 +29,8 @@ class Login extends React.Component {
   // 组件Dom
   render () {
     const {getFieldDecorator} = this.props.form
+    const {from} = this.props.location.state || {from: {pathname: '/'}}
+
     return (
       <div className={styles['login']}>
         <div className={styles['login-wrapper']}>
@@ -75,6 +77,18 @@ class Login extends React.Component {
                 登录
               </Button>
             </FormItem>
+            {
+              from.pathname !== '/' ? (
+                <div>
+                  <Alert
+                    message="权限错误"
+                    description="您所访问的页面需要登录才能查看!"
+                    type="error"
+                    closable
+                  />
+                </div>
+              ) : null
+            }
           </Form>
         </div>
       </div>
@@ -86,7 +100,6 @@ const WrappedLogin = Form.create()(Login)
 
 // 将model中的state变成组件的props
 function mapStateToProps (state) {
-  console.log(state)
   return {
     loading: state.loading.models.user,
   }
