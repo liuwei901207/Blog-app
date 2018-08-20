@@ -1,11 +1,13 @@
 /* 全站顶部header样式 */
 
 .site-header {
+	width: 100%;
 	transition: all .3s;
 	/*box-shadow: 0 2px 8px #f0f1f2;*/
-	position: relative;
-	z-index: 10;
+	position: fixed;
+	z-index: 1000;
 	max-width: 100%;
+	
 }
 
 .site-header.site-header--home {

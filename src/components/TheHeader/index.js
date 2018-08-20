@@ -5,12 +5,12 @@ import { Icon } from 'antd'
 import styles from './index.css'
 
 const mockMenuTabs = [
-  {name: '首页', iconType: 'home'},
-  {name: '分类/标签', iconType: 'tags-o'},
-  {name: '归档', iconType: 'switcher'},
-  {name: '关于', iconType: 'user'},
-  {name: '友链', iconType: 'link'},
-  {name: '更多', iconType: 'appstore-o'},
+  {id: 1, name: '首页', iconType: 'home'},
+  {id: 2, name: '分类/标签', iconType: 'tags-o'},
+  {id: 3, name: '归档', iconType: 'switcher'},
+  {id: 4, name: '关于', iconType: 'user'},
+  {id: 5, name: '友链', iconType: 'link'},
+  {id: 6, name: '更多', iconType: 'appstore-o'},
 ]
 
 class Index extends React.Component {
@@ -33,7 +33,12 @@ class Index extends React.Component {
             {
               this.state.menuTabs.map(
                 (menuTab) => (
-                  <li className={styles['site-header__tabItem']}><Icon type={menuTab.iconType}/> {menuTab.name}</li>
+                  <li className={styles['site-header__tabItem']}
+                      key={menuTab.id}
+                  >
+                    <Icon type={menuTab.iconType}/>
+                    {menuTab.name}
+                  </li>
                 ))
             }
           </ul>

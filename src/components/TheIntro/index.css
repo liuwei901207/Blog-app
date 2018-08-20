@@ -1,0 +1,20 @@
+/* 全站顶部图片banner样式 */
+
+.site-intro {
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	height: 50vh;
+	overflow: hidden;
+}
+
+.site-intro__img {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: calc(100% + 1px);
+	width: 100%;
+	filter: brightness(0.5);
+	background: url(../../assets/images/index-bg.jpg) no-repeat center center / cover content-box content-box;
+}

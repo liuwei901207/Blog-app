@@ -19,3 +19,7 @@ html, body, :global(#root) {
 .container {
 	*zoom: 1;
 }
+
+.site-wrapper {
+	height: 100vh;
+}
