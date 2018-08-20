@@ -1,0 +1,45 @@
+/* 全站顶部header样式 */
+
+.site-header {
+	transition: all .3s;
+	/*box-shadow: 0 2px 8px #f0f1f2;*/
+	position: relative;
+	z-index: 10;
+	max-width: 100%;
+}
+
+.site-header.site-header--home {
+
+}
+
+.site-header__container {
+	height: 60px;
+}
+
+.site-header__logo {
+	display: inline-block;
+	float: left;
+	height: 100%;
+	line-height: 60px;
+}
+
+.site-header__tabWrapper {
+	float: right;
+	list-style: none;
+	margin: 0;
+	height: 100%;
+}
+
+.site-header__tabItem {
+	padding: 5px 8px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	color: #262a30;
+	background-color: #f9f9f9;
+	transition: all .5s;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-top: 15px;
+}
+

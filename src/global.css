@@ -2,12 +2,20 @@ html, body, :global(#root) {
 	height: 100%;
 }
 
-.fade-enter {
-	opacity: 0;
-	z-index: 1;
+.container {
+	max-width: 1000px;
+	padding: 0 10px;
+	margin: 0 auto;
 }
 
-.fade-enter.fade-enter-active {
-	opacity: 1;
-	transition: opacity 250ms ease-in;
+.container:after {
+	display: block;
+	content: '.';
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.container {
+	*zoom: 1;
 }
