@@ -3,7 +3,7 @@ import { Route, Redirect, withRouter } from 'react-router-dom'
 import AuthHelper from '../src/utils/authHelper'
 
 ////////////////////////////////////////////////////////////
-// 通过 PrivateRoute.js 包裹的路由为私有路由，只有登录才能访问
+// 通过 PrivateRoute.js 包裹的路由为私有路由，提供登录校验功能
 
 class PrivateRoute extends React.Component {
   constructor (props) {

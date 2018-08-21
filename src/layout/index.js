@@ -1,19 +1,19 @@
 import React from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import withRouter from 'umi/withRouter'
-import SimpleLayout from './SimpleLayout'
+import MainLoginLayout from './MainLoginLayout'
 import MainBlogLayout from './MainBlogLayout'
 
 export default withRouter(function (props) {
   if (props.location.pathname === '/login') {
     return (
-      <SimpleLayout>
+      <MainLoginLayout>
         <TransitionGroup>
           <CSSTransition key={props.location.key} classNames="fade" timeout={1000}>
             {props.children}
           </CSSTransition>
         </TransitionGroup>
-      </SimpleLayout>
+      </MainLoginLayout>
     )
   }
 
