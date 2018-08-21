@@ -13,7 +13,7 @@ const mockMenuTabs = [
   {id: 6, name: '更多', iconType: 'appstore-o'},
 ]
 
-class Index extends React.Component {
+class TheHeaderCps extends React.Component {
 
   // 初始化State
   constructor (props) {
@@ -55,4 +55,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(Index)
+export default connect(mapStateToProps)(TheHeaderCps)
