@@ -5,13 +5,25 @@ import TheIntro from '../components/TheIntro'
 
 const MainBlogLayout = ({children}) => {
   return (
-    <div className="site-body">
+    <div>
       <TheHeader/>
       <div className="site-wrapper">
 
         <TheIntro/>
 
-        <div className="site-content">{children}</div>
+        <div className="container">
+          <div className="site-content__left">
+            1
+          </div>
+          <div className="site-content__rightWrapper">
+            <div className="site-content__right">
+              <div className="inner-content">
+                {children}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <TheFooter/>
       </div>
     </div>
