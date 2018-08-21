@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'dva'
-import { Icon } from 'antd'
+import { Icon, Button } from 'antd'
 
 import styles from './index.css'
 
@@ -21,6 +21,14 @@ class TheHeaderCps extends React.Component {
     this.state = {
       menuTabs: props.menuTabs || mockMenuTabs,
     }
+    this.handleLogout = this.handleLogout.bind(this)
+  }
+
+  handleLogout () {
+    this.props.dispatch({
+      type: 'auth/logout',
+      payload: {},
+    })
   }
 
   // 组件Dom
@@ -28,7 +36,9 @@ class TheHeaderCps extends React.Component {
     return (
       <header className={styles['site-header']}>
         <div className={`container ${styles['site-header__container']}`}>
-          <div className={styles['site-header__logo']}>My React Blog</div>
+          <div className={styles['site-header__logo']}>
+            <Button shape="circle" icon="logout" onClick={this.handleLogout}/>
+          </div>
           <ul className={styles['site-header__tabWrapper']}>
             {
               this.state.menuTabs.map(

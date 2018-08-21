@@ -45,3 +45,6 @@
 	margin-top: 15px;
 }
 
+.site-header__logout {
+	float: right;
+}

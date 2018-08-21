@@ -10,8 +10,9 @@ export default {
     }],
     ['umi-plugin-dva', {immer: true}],
   ],
-  // 权限路由
+  // 权限路由设置
   pages: {
-    '/admin': { Route: './routes/PrivateRoute.js' },
+    '/login': { Route: './routes/PrivateRouteForLogged.js' },
+    '/admin': { Route: './routes/PrivateRouteForLogged.js' },
   },
 }
