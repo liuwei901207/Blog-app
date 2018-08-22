@@ -4,6 +4,7 @@ export default {
     [
       'umi-plugin-routes', {
       exclude: [
+        /components/,
         /models/,
         /services/,
       ],

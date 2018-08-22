@@ -1,0 +1,31 @@
+.post-list-item {
+	position: relative;
+	padding: 1rem 0rem 1rem 0rem;
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+	z-index: 3;
+}
+
+.post-list-item__title {
+	line-height: 2.5rem;
+	color: #787878;
+	padding-bottom: 0.5rem;
+	font-size: 1.7rem;
+}
+
+.post-list-item__content {
+	color: #9c9c9c;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	font-weight: lighter;
+	word-break: break-word;
+	position: relative;
+	padding: 1px 0;
+}
+
+.abstract-meta {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0 0 0;
+	color: #aaa;
+	margin-bottom: 1rem;
+}

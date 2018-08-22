@@ -12,7 +12,11 @@ const client = new GraphQLClient(endpoint, {
 export default function Request (query, variables) {
   if (AuthHelper.getToken()) client.options.headers.Authorization = `Bearer ${AuthHelper.getToken()}` // 每次请求携带token
   return client.request(query, variables ? variables : {mutationName: null}).then(data => data).catch(err => {
-    console.log(err.response)
-    throw new Error(`${err.response.message || err.response.errors[0].message}`)
+
+    if (err.response) {
+      throw new Error(`${err.response.message || err.response.errors[0].message}`)
+    } else {
+      throw new Error('服务器异常，请稍后再试!')
+    }
   })
 }

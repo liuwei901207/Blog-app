@@ -35,24 +35,24 @@ class TheHeaderCps extends React.Component {
   render () {
     return (
       <header className={styles['site-header']}>
-        <div className={`container ${styles['site-header__container']}`}>
-          <div className={styles['site-header__logo']}>
-            <Button shape="circle" icon="logout" onClick={this.handleLogout}/>
-          </div>
-          <ul className={styles['site-header__tabWrapper']}>
-            {
-              this.state.menuTabs.map(
-                (menuTab) => (
-                  <li className={styles['site-header__tabItem']}
-                      key={menuTab.id}
-                  >
-                    <Icon type={menuTab.iconType}/>
-                    {menuTab.name}
-                  </li>
-                ))
-            }
-          </ul>
-        </div>
+        {/*<div className={`container ${styles['site-header__container']}`}>*/}
+          {/*<div className={styles['site-header__logo']}>*/}
+            {/*<Button shape="circle" icon="logout" onClick={this.handleLogout}/>*/}
+          {/*</div>*/}
+          {/*<ul className={styles['site-header__tabWrapper']}>*/}
+            {/*{*/}
+              {/*this.state.menuTabs.map(*/}
+                {/*(menuTab) => (*/}
+                  {/*<li className={styles['site-header__tabItem']}*/}
+                      {/*key={menuTab.id}*/}
+                  {/*>*/}
+                    {/*<Icon type={menuTab.iconType}/>*/}
+                    {/*{menuTab.name}*/}
+                  {/*</li>*/}
+                {/*))*/}
+            {/*}*/}
+          {/*</ul>*/}
+        {/*</div>*/}
       </header>
     )
   }

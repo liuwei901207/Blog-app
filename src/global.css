@@ -16,6 +16,14 @@ body {
 	color: #eee;
 }
 
+a {
+	color: #777;
+}
+
+a:hover {
+	color: #f75357;
+}
+
 .container {
 	max-width: 1200px;
 	padding: 0 10px;
@@ -63,3 +71,10 @@ body {
 	margin-left: 3em;
 }
 
+/* Layout */
+.markdown-container img {
+	display: block;
+	max-width: 100%;
+	box-shadow: none;
+	margin: 1rem auto 1rem;
+}

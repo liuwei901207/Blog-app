@@ -5,7 +5,7 @@ import styles from './index.css'
 
 class TheIntroCps extends React.Component {
   state = {
-    top: 10,
+    top: 50,
   }
 
   render () {
