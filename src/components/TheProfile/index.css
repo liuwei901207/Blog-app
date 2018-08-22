@@ -1,3 +1,68 @@
 .site-profile {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 0.5rem;
+	margin: 4px 0 0 0;
+	color: #777;
+}
 
+.site-profile * {
+	color: #777;
+}
+
+.site-profile *:hover {
+	color: #777;
+}
+
+.site-profile__avatar {
+	display: block;
+	border-radius: 1rem;
+	width: 100%;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.site-profile__name {
+	font-size: 2rem;
+	line-height: 3rem;
+	padding: 0.5rem 0 0 0;
+	color: #333;
+	text-align: center;
+}
+
+.site-profile-signature {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.site-profile-social {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	line-height: 1.7rem;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-profile__icon {
+	font-size: 24px;
+	margin-right: .5em;
+	color: #777;
+}
+
+.site-profile__icon:hover {
+	color: #f75357;
+}
+
+.site-profile-aboutMe {
+	border-bottom: none;
+	padding: 0.5rem 0;
+	padding-bottom: 0;
+}
+
+.site-profile-aboutMe a {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.site-profile-aboutMe a:hover {
+	color: #f75357;
 }

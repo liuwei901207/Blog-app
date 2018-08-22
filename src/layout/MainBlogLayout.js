@@ -2,6 +2,7 @@ import React from 'react'
 import TheHeader from '../components/TheHeader'
 import TheFooter from '../components/TheFooter'
 import TheIntro from '../components/TheIntro'
+import TheProfile from '../components/TheProfile'
 
 const MainBlogLayout = ({children}) => {
   return (
@@ -11,9 +12,9 @@ const MainBlogLayout = ({children}) => {
 
         <TheIntro/>
 
-        <div className="container">
+        <div className="container container-main">
           <div className="site-content__left">
-            1
+            <TheProfile/>
           </div>
           <div className="site-content__rightWrapper">
             <div className="site-content__right">

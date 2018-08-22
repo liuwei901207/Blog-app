@@ -11,10 +11,19 @@ body {
 	font-size: 1em;
 }
 
+*::selection {
+	background: #f75357;
+	color: #eee;
+}
+
 .container {
 	max-width: 1200px;
 	padding: 0 10px;
 	margin: 0 auto;
+}
+
+.container-main {
+	padding: 3rem 0 0 0;
 }
 
 .container:after {
