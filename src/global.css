@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 *::selection {
@@ -31,7 +31,7 @@ a:hover {
 }
 
 .container-main {
-	padding: 3rem 0 0 0;
+	padding: 2rem;
 }
 
 .container:after {
@@ -54,7 +54,7 @@ a:hover {
 .site-content__left {
 	position: relative;
 	float: left;
-	width: 200px;
+	max-width: 200px;
 	margin-right: -200px;
 }
 
@@ -68,13 +68,34 @@ a:hover {
 }
 
 .inner-content {
-	margin-left: 3em;
+	margin-left: 3rem;
 }
 
-/* Layout */
 .markdown-container img {
 	display: block;
 	max-width: 100%;
 	box-shadow: none;
 	margin: 1rem auto 1rem;
+}
+
+/* media */
+@media screen and (max-width: 980px) {
+	.container-main {
+		padding: 1rem;
+	}
+	
+	.site-content__left {
+		float: none;
+		width: 200px;
+		margin: 0 auto;
+	}
+	
+	.site-content__right {
+		margin: 0;
+	}
+	
+	.inner-content {
+		margin-left: 0;
+		margin-bottom: 3rem;
+	}
 }

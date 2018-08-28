@@ -15,7 +15,14 @@
 	color: #777;
 }
 
-.site-footer__item--pv{
+.site-footer__item--pv {
 	font: 0.6rem "Oswald-Regular";
 	color: #ddd;
+}
+
+/* media */
+@media screen and (max-width: 980px) {
+	.site-footer {
+		padding: 1rem;
+	}
 }

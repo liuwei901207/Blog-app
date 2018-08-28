@@ -42,9 +42,24 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.site-profile-item {
+	text-align: center;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-profile-item a {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.site-profile-item a:hover {
+	color: #f75357;
+}
+
 .site-profile__icon {
 	font-size: 24px;
-	margin-right: .5em;
+	margin-right: .5rem;
 	color: #777;
 }
 
@@ -53,6 +68,7 @@
 }
 
 .site-profile-aboutMe {
+	text-align: center;
 	border-bottom: none;
 	padding: 0.5rem 0;
 	padding-bottom: 0;
@@ -65,4 +81,11 @@
 
 .site-profile-aboutMe a:hover {
 	color: #f75357;
+}
+
+@media screen and (max-width: 980px) {
+	.site-profile__avatar {
+		width: 60%;
+		margin: 0 auto;
+	}
 }
