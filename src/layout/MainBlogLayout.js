@@ -13,15 +13,15 @@ const MainBlogLayout = ({children}) => {
         <TheIntro/>
 
         <div className="container container-main">
-          <div className="site-content__left">
-            <TheProfile/>
-          </div>
           <div className="site-content__rightWrapper">
             <div className="site-content__right">
               <div className="inner-content">
                 {children}
               </div>
             </div>
+          </div>
+          <div className="site-content__left">
+            <TheProfile/>
           </div>
         </div>
 
